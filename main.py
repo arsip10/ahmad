@@ -135,13 +135,13 @@ def Question5(lives, correctQuestions, minCorrect, maxCorrect):
 
 
 lives, correctQuestions = Question1(lives, correctQuestions, minCorrect, maxCorrect)
-print(lives, correctQuestions)
+
 lives, correctQuestions = Question2(lives, correctQuestions, minCorrect, maxCorrect)
-print(lives, correctQuestions)
+
 lives, correctQuestions = Question3(lives, correctQuestions, minCorrect, maxCorrect)
-print(lives, correctQuestions)
+
 lives, correctQuestions = Question4(lives, correctQuestions, minCorrect, maxCorrect)
-print(lives, correctQuestions)
+
 lives, correctQuestions = Question5(lives, correctQuestions, minCorrect, maxCorrect)
-print(lives, correctQuestions)
+
 gameOver(lives, correctQuestions, minCorrect, maxCorrect)
