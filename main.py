@@ -7,8 +7,8 @@ print(spacer)
 
 lives = 3 #how many questions you can get wrong before game over
 correctQuestions = 0 #how many questions are succesfully answered
-minCorrect = 5 #minimum of correct questions to win the game
-maxCorrect = 10 #maximum of correct questions
+minCorrect = 3 #minimum of correct questions to win the game
+maxCorrect = 5 #maximum of correct questions
 
 def gameOver(remLives, correctQuestions, minCorrect, maxCorrect):
     if remLives < 1:
@@ -21,12 +21,16 @@ def gameOver(remLives, correctQuestions, minCorrect, maxCorrect):
             print("You're out of lifes!")
             print("Only " + str(correctQuestions) + "/" + str(maxCorrect) + " correct questions.")
             print("Better luck next time.")
+            exit()
 
     elif remLives > 0:
         if correctQuestions == maxCorrect:
             print("Great Job!")
             print("You got all of the questions correct.")
             print("Give yourself a pat on the back!")
+        else:
+            print("Well Done!")
+            print("You've won the game with " + str(correctQuestions) + "/" + str(maxCorrect) + " correct questions.")
 
 
 def Question1(lives, correctQuestions, minCorrect, maxCorrect):
@@ -39,9 +43,11 @@ def Question1(lives, correctQuestions, minCorrect, maxCorrect):
         if ans == correctAnswer:
             print("Correct!")
             correctQuestions = correctQuestions + 1
+            return lives, correctQuestions
         else: 
             print("Incorrect!")
             lives = lives - 1
+            return lives, correctQuestions
     else:  gameOver(lives, correctQuestions, minCorrect, maxCorrect)
          
         
@@ -55,9 +61,11 @@ def Question2(lives, correctQuestions, minCorrect, maxCorrect):
         if ans == correctAnswer:
             print("Correct!")
             correctQuestions = correctQuestions + 1
+            return lives, correctQuestions
         else: 
             print("Incorrect!")
             lives = lives - 1
+            return lives, correctQuestions
     else:  gameOver(lives, correctQuestions, minCorrect, maxCorrect)
 
 
@@ -72,10 +80,12 @@ def Question3(lives, correctQuestions, minCorrect, maxCorrect):
         if ans == correctAnswer:
             print("Correct!")
             correctQuestions = correctQuestions + 1
+            return lives, correctQuestions
 
         else: 
             print("Incorrect!")
             lives = lives - 1
+            return lives, correctQuestions
     else:  gameOver(lives, correctQuestions, minCorrect, maxCorrect)
 
 
@@ -93,9 +103,11 @@ def Question4(lives, correctQuestions, minCorrect, maxCorrect):
         if ans == correctAnswer:
             print("Correct!")
             correctQuestions = correctQuestions + 1
+            return lives, correctQuestions
         else: 
             print("Incorrect!")
             lives = lives - 1
+            return lives, correctQuestions
     else:  gameOver(lives, correctQuestions, minCorrect, maxCorrect)
 
 
@@ -113,15 +125,23 @@ def Question5(lives, correctQuestions, minCorrect, maxCorrect):
         if ans == correctAnswer:
             print("Correct!")
             correctQuestions = correctQuestions + 1
+            return lives, correctQuestions
         else: 
             print("Incorrect!")
             lives = lives - 1
+            return lives, correctQuestions
     else:  gameOver(lives, correctQuestions, minCorrect, maxCorrect)
 
 
-Question1(lives, correctQuestions, minCorrect, maxCorrect)
-Question2(lives, correctQuestions, minCorrect, maxCorrect)
-Question3(lives, correctQuestions, minCorrect, maxCorrect)
-Question4(lives, correctQuestions, minCorrect, maxCorrect)
-Question5(lives, correctQuestions, minCorrect, maxCorrect)
+
+lives, correctQuestions = Question1(lives, correctQuestions, minCorrect, maxCorrect)
+print(lives, correctQuestions)
+lives, correctQuestions = Question2(lives, correctQuestions, minCorrect, maxCorrect)
+print(lives, correctQuestions)
+lives, correctQuestions = Question3(lives, correctQuestions, minCorrect, maxCorrect)
+print(lives, correctQuestions)
+lives, correctQuestions = Question4(lives, correctQuestions, minCorrect, maxCorrect)
+print(lives, correctQuestions)
+lives, correctQuestions = Question5(lives, correctQuestions, minCorrect, maxCorrect)
+print(lives, correctQuestions)
 gameOver(lives, correctQuestions, minCorrect, maxCorrect)
