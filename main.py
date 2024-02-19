@@ -37,7 +37,6 @@ def gameOver(remLives, correctQuestions, minCorrect, maxCorrect):
             print("You've won the game with " + str(correctQuestions) + "/" + str(maxCorrect) + " correct questions.")
             input("Press Enter to exit...")
 
-
 def Question1(lives, correctQuestions, minCorrect, maxCorrect):
     if lives > 0:
             
@@ -54,8 +53,7 @@ def Question1(lives, correctQuestions, minCorrect, maxCorrect):
             lives = lives - 1
             return lives, correctQuestions
     else:  gameOver(lives, correctQuestions, minCorrect, maxCorrect)
-         
-        
+            
 def Question2(lives, correctQuestions, minCorrect, maxCorrect):
     if lives > 0:
             
@@ -72,7 +70,6 @@ def Question2(lives, correctQuestions, minCorrect, maxCorrect):
             lives = lives - 1
             return lives, correctQuestions
     else:  gameOver(lives, correctQuestions, minCorrect, maxCorrect)
-
 
 def Question3(lives, correctQuestions, minCorrect, maxCorrect):
     if lives > 0:
@@ -92,7 +89,6 @@ def Question3(lives, correctQuestions, minCorrect, maxCorrect):
             lives = lives - 1
             return lives, correctQuestions
     else:  gameOver(lives, correctQuestions, minCorrect, maxCorrect)
-
 
 def Question4(lives, correctQuestions, minCorrect, maxCorrect):
     if lives > 0:
@@ -115,7 +111,6 @@ def Question4(lives, correctQuestions, minCorrect, maxCorrect):
             return lives, correctQuestions
     else:  gameOver(lives, correctQuestions, minCorrect, maxCorrect)
 
-
 def Question5(lives, correctQuestions, minCorrect, maxCorrect):
     if lives > 0:
             
@@ -137,7 +132,6 @@ def Question5(lives, correctQuestions, minCorrect, maxCorrect):
             return lives, correctQuestions
     else:  gameOver(lives, correctQuestions, minCorrect, maxCorrect)
 
-
 def Question6(lives, correctQuestions, minCorrect, maxCorrect):
     if lives > 0:
             
@@ -158,7 +152,6 @@ def Question6(lives, correctQuestions, minCorrect, maxCorrect):
             lives = lives - 1
             return lives, correctQuestions
     else:  gameOver(lives, correctQuestions, minCorrect, maxCorrect)
-
 
 def Question7(lives, correctQuestions, minCorrect, maxCorrect):
     if lives > 0:
@@ -182,7 +175,6 @@ def Question7(lives, correctQuestions, minCorrect, maxCorrect):
             return lives, correctQuestions
     else:  gameOver(lives, correctQuestions, minCorrect, maxCorrect)
 
-
 def Question8(lives, correctQuestions, minCorrect, maxCorrect):
     if lives > 0:
             
@@ -205,7 +197,6 @@ def Question8(lives, correctQuestions, minCorrect, maxCorrect):
             return lives, correctQuestions
     else:  gameOver(lives, correctQuestions, minCorrect, maxCorrect)
 
-
 def Question9(lives, correctQuestions, minCorrect, maxCorrect):
     if lives > 0:
             
@@ -227,7 +218,6 @@ def Question9(lives, correctQuestions, minCorrect, maxCorrect):
             lives = lives - 1
             return lives, correctQuestions
     else:  gameOver(lives, correctQuestions, minCorrect, maxCorrect)
-
 
 def Question10(lives, correctQuestions, minCorrect, maxCorrect):
     if lives > 0:
